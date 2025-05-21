@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Site Network Profile - New York HQ</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2, h3 {
+      color: #004080;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #e6f0ff;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🏢 Site Network Profile – New York HQ</h1>
+
+    <div class="section">
+      <h2>📍 General Information</h2>
+      <p><span class="label">Site Name:</span> New York Headquarters</p>
+      <p><span class="label">Location:</span> 123 Main St, New York, NY, USA</p>
+      <p><span class="label">Site Code:</span> NY-HQ</p>
+      <p><span class="label">Site Type:</span> Corporate Office</p>
+      <p><span class="label">Contact:</span> John Doe – Network Admin (john.doe@example.com, +1-212-555-1234)</p>
+    </div>
+
+    <div class="section">
+      <h2>🌐 WAN Information</h2>
+      <table>
+        <tr>
+          <th>ISP</th>
+          <th>Circuit ID</th>
+          <th>IP Block</th>
+          <th>Bandwidth</th>
+          <th>Type</th>
+        </tr>
+        <tr>
+          <td>AT&T</td>
+          <td>NYHQ-ATT-001</td>
+          <td>203.0.113.0/29</td>
+          <td>500 Mbps</td>
+          <td>DIA</td>
+        </tr>
+        <tr>
+          <td>Verizon</td>
+          <td>NYHQ-VZN-002</td>
+          <td>198.51.100.0/29</td>
+          <td>500 Mbps</td>
+          <td>MPLS</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>📡 LAN Details</h2>
+      <p><span class="label">Core Switch:</span> Cisco Catalyst 9500</p>
+      <p><span class="label">Access Switches:</span> Cisco 9200 Series (x10)</p>
+      <p><span class="label">Subnet:</span> 10.10.0.0/16</p>
+      <h3>VLANs</h3>
+      <table>
+        <tr>
+          <th>VLAN ID</th>
+          <th>Name</th>
+          <th>Subnet</th>
+          <th>Purpose</th>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Users</td>
+          <td>10.10.10.0/24</td>
+          <td>Employee Access</td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td>Servers</td>
+          <td>10.10.20.0/24</td>
+          <td>Internal Hosts</td>
+        </tr>
+        <tr>
+          <td>30</td>
+          <td>Guest</td>
+          <td>10.10.30.0/24</td>
+          <td>Internet Only</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>🔐 Security & Firewall</h2>
+      <p><span class="label">Firewall:</span> FortiGate 100F</p>
+      <ul>
+        <li>Allow LAN to WAN (restricted)</li>
+        <li>Guest VLAN has internet-only policy</li>
+        <li>VPN allowed only from specific IPs</li>
+      </ul>
+      <p><span class="label">VPN:</span> IPsec Tunnel to DC1 (10.0.0.0/16), SSL VPN enabled</p>
+    </div>
+
+    <div class="section">
+      <h2>📶 Wireless</h2>
+      <p><span class="label">Controller:</span> Cisco 9800-CL</p>
+      <p><span class="label">Access Points:</span> 30 (AIR-AP3802I)</p>
+      <table>
+        <tr>
+          <th>SSID</th>
+          <th>VLAN</th>
+          <th>Authentication</th>
+        </tr>
+        <tr>
+          <td>Corp-WiFi</td>
+          <td>10</td>
+          <td>802.1X (RADIUS)</td>
+        </tr>
+        <tr>
+          <td>Guest-WiFi</td>
+          <td>30</td>
+          <td>Captive Portal</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>🖥️ Monitoring & Tools</h2>
+      <ul>
+        <li><strong>NMS:</strong> PRTG</li>
+        <li><strong>Syslog Server:</strong> 10.10.20.50</li>
+        <li><strong>NetFlow:</strong> Enabled on core</li>
+        <li><strong>SNMP:</strong> v3 configured on all devices</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>🔄 Redundancy & HA</h2>
+      <ul>
+        <li>Dual ISPs: Yes</li>
+        <li>Redundant Core Switches: Yes (HSRP)</li>
+        <li>UPS Backup: 8 hours</li>
+        <li>Generator: 24 hours</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>📎 Notes</h2>
+      <ul>
+        <li>Weekly cloud backups (Sunday 2 AM)</li>
+        <li>Biometric physical security</li>
+        <li>All cabling: Cat6A</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
